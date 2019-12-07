@@ -83,7 +83,7 @@ function makeSmartPerson(name/* code here */) {
       return a + b;
     },
     speak : function() {
-      return `Hello, my name is ${name}`
+      return `Hello, my name is ${name}`;
     }
   }
 }
@@ -124,7 +124,7 @@ function get3rdCar(inventory) {
   const the3rd = inventory.find((item, index) => {
     return index === 2 // we use 2 because index is zero-based.
   })
-  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
+  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`;
 }
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -146,11 +146,8 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
-  const the3rd = inventory.find((item, index) => {
-    return index === 0
-  })
-  const car = index[0];
-  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
+  const car = inventory[index];
+  return `This is a ${car.car_make} ${car.car_model}`;
 }
 
 /**
@@ -164,15 +161,11 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(module) {
+function getLastCarInfo(inventory) {
   /* code here */
-  return (require('./data/inventory.js'));
-  const lastCar = (module.exports).find((item, index) => {
-    return index === module.exports(50)
-  })
-  const car = [ module.exports(50) ];
-  console.log(car);
-}
+  const car = inventory[inventory.length - 1];
+    return `This is a ${car.car_make} ${car.car_model} Car`;
+  }
 
 /**
  * ### Challenge `getCarInfoById`
@@ -186,8 +179,13 @@ function getLastCarInfo(module) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(/* code here */inventory, id) {
   /* code here */
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].id === id) {
+      return `This is a ${inventory[i].car_make} ${inventory[i].car_model}.`;
+    }
+  }
 }
 
 /**
@@ -200,6 +198,7 @@ function getCarInfoById(/* code here */) {
 */
 function sortCarInventory(/* code here */) {
   /* code here */
+  
 }
 
 /**
