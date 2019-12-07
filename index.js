@@ -259,15 +259,16 @@ function getGermanCars(/* code here */inventory) {
   for (let i = 0; i < inventory.length; i++) {
     const car = inventory[i];
     if (
-      car.car_make === 'Audi',
-      car.car_make === 'Mercedes-Benz',
-      car.car_make === 'Volkswagen',
-      car.car_make === 'BMW' 
-     {
-      result.push(car);
-    }
-  }
+      car.car_make === "Audi" ||
+      car.car_make === "Mercedes-Benz" ||
+      car.car_make === "Volkswagen" ||
+      car.car_make === "BMW" ||
+     
+      result.push(car)
+    )
+
   return result;
+  }
 }
 
 /**
@@ -288,9 +289,9 @@ function getGermanCars(/* code here */inventory) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => {return a + b}; // code here!
+const addFive = (num) => {return num + 5}; // code here!
+const argTimesTwo = (num) => {return num * 2}; // code here!
 
 /**
  * ### Challenge `carMaker`
