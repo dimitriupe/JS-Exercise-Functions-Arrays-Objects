@@ -262,13 +262,12 @@ function getGermanCars(/* code here */inventory) {
       car.car_make === "Audi" ||
       car.car_make === "Mercedes-Benz" ||
       car.car_make === "Volkswagen" ||
-      car.car_make === "BMW" ||
-     
-      result.push(car)
-    )
-
-  return result;
+      car.car_make === "BMW"
+     ) {
+      result.push(car);
+    }
   }
+  return result;
 }
 
 /**
